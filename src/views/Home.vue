@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+<div>
+  <header class='defaultHero'>
+    <div class="banner">
+      <h1>luxurious rooms</h1>
+      <div></div>
+      <p>premium rooms starting at $9999.999</p>
+      <router-link to='/rooms' class='btn-primary'>
+        our rooms
+      </router-link>
+    </div>
+  </header>
+  <services />
+  <featuredrooms />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import services from '../components/Services.vue';
+import featuredrooms from '../components/FeaturedRooms.vue';
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    services,
+    featuredrooms
   }
+
 };
 </script>
